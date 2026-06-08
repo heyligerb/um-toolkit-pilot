@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UM Toolkit</title>
+  <!--
+    UM-B005 — Pilot Landing Page, Memory-First OS
+    5-unit T1 hook test. Variant routing via ?v=u1..u5. Default: u1.
+    Deploy this file to the agreed host before pixel installation.
+    Replace [EVALUATION_URL] with the real pilot evaluation thread URL before launch.
+    Replace [PIXEL_ID] with the Meta Pixel ID from attribution-config.md before launch.
+    DO NOT launch without CEO GATE-2 approval.
+  -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Georgia, serif;
+      background: #FAFAF8;
+      color: #1A1A1A;
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 64px;
+    }
+
+    #page-h1 {
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      max-width: 600px;
+      white-space: pre-line; /* allows \n line break for Unit 1 */
+    }
+
+    #page-sub {
+      font-size: 20px;
+      color: #444;
+      margin-top: 20px;
+      max-width: 560px;
+      line-height: 1.55;
+    }
+
+    #page-badge {
+      display: block;
+      font-size: 11px;
+      font-variant: small-caps;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #888;
+      margin-top: 18px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #1A1A1A;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-top: 32px;
+    }
+
+    .cta-btn:hover { background: #333; }
+
+    /* Sections */
+    .section {
+      padding: 52px 0;
+      border-top: 1px solid #E8E8E4;
+    }
+
+    .section p {
+      font-size: 18px;
+      line-height: 1.68;
+      color: #1A1A1A;
+      margin-bottom: 18px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    #transition-line {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: #1A1A1A;
+    }
+
+    /* §3 claim rows */
+    .claim-row {
+      margin-bottom: 22px;
+    }
+
+    .claim-row strong {
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1A1A1A;
+    }
+
+    .claim-row span {
+      font-size: 17px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* §5 offer block */
+    .offer-block {
+      background: #F2F1EE;
+      border-radius: 8px;
+      padding: 32px 36px;
+    }
+
+    .offer-block p {
+      color: #1A1A1A;
+    }
+
+    /* §6 objection block */
+    .objection {
+      margin-bottom: 30px;
+    }
+
+    .objection:last-child { margin-bottom: 0; }
+
+    .objection .question {
+      font-size: 17px;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 8px;
+    }
+
+    .objection .answer {
+      font-size: 17px;
+      color: #444;
+      line-height: 1.62;
+    }
+
+    /* Footer CTA */
+    .footer-cta {
+      padding: 72px 0;
+      text-align: left;
+      border-top: 1px solid #E8E8E4;
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      #page-h1 { font-size: 32px; }
+      .hero { padding: 52px 0 44px; }
+      #page-sub { font-size: 18px; }
+      .offer-block { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HERO — variant-swapped by JS -->
+  <section class="hero">
+    <h1 id="page-h1"></h1>
+    <p id="page-sub"></p>
+    <span id="page-badge"></span>
+    <a href="[EVALUATION_URL]" class="cta-btn" id="hero-cta">See the pilot →</a>
+  </section>
+
+  <!-- §2 — The split (held constant) -->
+  <section class="section" id="s2">
+    <p id="transition-line"></p>
+    <p>A draft generator gives you a paragraph. You re-paste your brand context. Tomorrow, you do it again.</p>
+    <p>An operating layer remembers your brand once, then every skill reads from that memory, on research, on persona, on angle, on copy, on the ad and the page, on the teardown.</p>
+  </section>
+
+  <!-- §3 — Three-row claim block (held constant) -->
+  <section class="section" id="s3">
+    <div class="claim-row">
+      <strong>One brand memory.</strong>
+      <span>Voice, audience, positioning, and approved claims live in reusable intelligence files.</span>
+    </div>
+    <div class="claim-row">
+      <strong>Every skill reads from it.</strong>
+      <span>Output reflects your brand, not a generic template.</span>
+    </div>
+    <div class="claim-row">
+      <strong>A review gate before anything ships.</strong>
+      <span>Drafts route through an audit loop, not straight to publish.</span>
+    </div>
+  </section>
+
+  <!-- §4 — Full-path line (held constant, ONE SENTENCE with internal commas — do not bullet) -->
+  <section class="section" id="s4">
+    <p>The toolkit covers what a marketing pod actually does, from research and persona to angle and copy, through the ad and the page, and back through the teardown, all reading from the same brand memory.</p>
+  </section>
+
+  <!-- §5 — Pilot offer block (held constant) -->
+  <section class="section" id="s5">
+    <div class="offer-block">
+      <p>The pilot is an evaluation. You'll see the toolkit produce a real, on-brand asset and route it through the review gate.</p>
+      <p>No price, no guarantee, no countdown — this stage is for seeing whether the mechanism holds up before anything else is on the table.</p>
+    </div>
+    <a href="[EVALUATION_URL]" class="cta-btn" style="margin-top: 28px;" id="mid-cta">See the pilot →</a>
+  </section>
+
+  <!-- §6 — Objection block (held constant) -->
+  <section class="section" id="s6">
+    <div class="objection">
+      <p class="question">"Another tool I'll have to babysit."</p>
+      <p class="answer">The review gate is the babysitting, built in. You see the audit verdict before anything ships, not after.</p>
+    </div>
+    <div class="objection">
+      <p class="question">"It'll sound generic like the rest."</p>
+      <p class="answer">Generic happens when the tool starts from zero. This one starts from your brand memory, and the same memory is what every skill reads from.</p>
+    </div>
+  </section>
+
+  <!-- §7 — Footer CTA (held constant) -->
+  <section class="footer-cta">
+    <a href="[EVALUATION_URL]" class="cta-btn" id="footer-cta">See the pilot →</a>
+  </section>
+
+</div>
+
+<!--
+  META PIXEL — install before launch
+  Replace [PIXEL_ID] with the value from attribution-config.md once provisioned.
+  Remove the comment block wrapper below after provisioning.
+-->
+<!--
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','[PIXEL_ID]');
+  fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=[PIXEL_ID]&ev=PageView&noscript=1"/></noscript>
+-->
+
+<script>
+  // UM-B005 T1 Hook Test — Variant routing
+  // ?v=u1 (default) through ?v=u5
+  // Body §2–§7 is identical across all units. Only hero section swaps.
+
+  var VARIANTS = {
+    u1: {
+      h1: 'Prompts forget.\nSystems learn.',
+      sub: 'Most AI marketing tools start from zero every time. UM Toolkit doesn’t, it remembers your brand and reads from that memory on every skill.',
+      badge: '15 specialist skills · one brand memory · a review gate',
+      transition: 'Here is the distinction.'
+    },
+    u2: {
+      h1: 'Most AI tools start from zero. This one starts from memory.',
+      sub: 'Re-pasting your brand context into a new chat every morning is a tax. The toolkit removes it by remembering your brand once, then reading from that memory on every skill.',
+      badge: 'Brand memory at the floor · every skill reads from it · review gate before anything ships',
+      transition: 'Here is where the difference lives.'
+    },
+    u3: {
+      h1: 'It’s not an operating layer if it forgets your brand by Tuesday.',
+      sub: 'Persistent brand memory is what separates an operating layer from a draft generator, and UM Toolkit is built on the memory layer first.',
+      badge: 'Persistent brand memory · every skill reads from it · audit gate before anything ships',
+      transition: 'Here is the distinction the line is pointing at.'
+    },
+    u4: {
+      h1: 'Operating layer, not draft generator.',
+      sub: 'A draft generator hands you a paragraph and forgets you by morning. An operating layer remembers your brand once, then every skill reads from that memory.',
+      badge: 'One brand memory · every skill reads from it · review gate before anything ships',
+      transition: 'Here is the split, plain.'
+    },
+    u5: {
+      h1: 'Stop re-pasting your brand context.',
+      sub: 'Re-pasting your brand context into a new chat every morning is what a draft generator demands. An operating layer remembers your brand once, then reads from that memory on every skill.',
+      badge: 'Brand memory built in · every skill reads from it · review gate before anything ships',
+      transition: 'Here is what changes.'
+    }
+  };
+
+  var params = new URLSearchParams(window.location.search);
+  var v = params.get('v') || 'u1';
+  if (!VARIANTS[v]) v = 'u1';
+
+  var d = VARIANTS[v];
+
+  document.getElementById('page-h1').textContent = d.h1;
+  document.getElementById('page-sub').textContent = d.sub;
+  document.getElementById('page-badge').textContent = d.badge;
+  document.getElementById('transition-line').textContent = d.transition;
+
+  // Ensure ?v= is always present in URL (aids analytics matching)
+  if (!params.get('v')) {
+    var url = new URL(window.location.href);
+    url.searchParams.set('v', 'u1');
+    window.history.replaceState({}, '', url.toString());
+  }
+</script>
+
+</body>
+</html>
