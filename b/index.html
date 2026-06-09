@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UM Toolkit</title>
+  <!--
+    UM-B006 — Pilot Landing Page, No-Leak Brand Intelligence (Avatar B / Angle 2)
+    5-unit T1 hook test. Variant routing via ?v=u1..u5. Default: u1.
+    Symmetric to packs/UM-B005/index.html (Angle 1). Body §2–§7 held constant; only
+    hero (H1, sub, badge, transition line) swaps per variant.
+    §4 renders as ONE sentence with internal commas — never as a <ul> or step list.
+    Deploy this file to the agreed host before pixel installation.
+    Replace [EVALUATION_URL] with the real pilot evaluation thread URL before launch.
+    Replace [PIXEL_ID] with the Meta Pixel ID from attribution-config.md before launch.
+    DO NOT launch without CEO GATE-2 approval and the dim-7 next-step build spec
+    (≥2 distinct brand properties produced from separate memory files + at least one
+    compliance-gate verdict in the flow) actually shipped behind the CTA.
+  -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Georgia, serif;
+      background: #FAFAF8;
+      color: #1A1A1A;
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 64px;
+    }
+
+    #page-h1 {
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      max-width: 600px;
+      white-space: pre-line; /* allows \n line break for multi-clause H1s */
+    }
+
+    #page-sub {
+      font-size: 20px;
+      color: #444;
+      margin-top: 20px;
+      max-width: 560px;
+      line-height: 1.55;
+    }
+
+    #page-badge {
+      display: block;
+      font-size: 11px;
+      font-variant: small-caps;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #888;
+      margin-top: 18px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #1A1A1A;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-top: 32px;
+    }
+
+    .cta-btn:hover { background: #333; }
+
+    /* Sections */
+    .section {
+      padding: 52px 0;
+      border-top: 1px solid #E8E8E4;
+    }
+
+    .section p {
+      font-size: 18px;
+      line-height: 1.68;
+      color: #1A1A1A;
+      margin-bottom: 18px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    #transition-line {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: #1A1A1A;
+    }
+
+    /* §3 claim rows */
+    .claim-row {
+      margin-bottom: 22px;
+    }
+
+    .claim-row strong {
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1A1A1A;
+    }
+
+    .claim-row span {
+      font-size: 17px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* §5 offer block */
+    .offer-block {
+      background: #F2F1EE;
+      border-radius: 8px;
+      padding: 32px 36px;
+    }
+
+    .offer-block p {
+      color: #1A1A1A;
+    }
+
+    /* §6 objection block */
+    .objection {
+      margin-bottom: 30px;
+    }
+
+    .objection:last-child { margin-bottom: 0; }
+
+    .objection .question {
+      font-size: 17px;
+      font-weight: 700;
+      color: #1A1A1A;
+      margin-bottom: 8px;
+    }
+
+    .objection .answer {
+      font-size: 17px;
+      color: #444;
+      line-height: 1.62;
+    }
+
+    /* Footer CTA */
+    .footer-cta {
+      padding: 72px 0;
+      text-align: left;
+      border-top: 1px solid #E8E8E4;
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      #page-h1 { font-size: 32px; }
+      .hero { padding: 52px 0 44px; }
+      #page-sub { font-size: 18px; }
+      .offer-block { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HERO — variant-swapped by JS -->
+  <section class="hero">
+    <h1 id="page-h1"></h1>
+    <p id="page-sub"></p>
+    <span id="page-badge"></span>
+    <a href="[EVALUATION_URL]" class="cta-btn" id="hero-cta">See the pilot &rarr;</a>
+  </section>
+
+  <!-- §2 — The split (held constant) -->
+  <section class="section" id="s2">
+    <p id="transition-line"></p>
+    <p>One shared memory means every client's brand bleeds into the next. You paste, you re-paste, you hope the model didn't drift mid-session.</p>
+    <p>Per-client brand intelligence keeps each brand in its own memory, with its voice, its audience, and its approved claims, and every skill on that client reads only from that client's file.</p>
+  </section>
+
+  <!-- §3 — Three-row claim block (held constant) -->
+  <section class="section" id="s3">
+    <div class="claim-row">
+      <strong>One memory per brand.</strong>
+      <span>Voice, audience, positioning, and approved claims live in their own reusable intelligence files, one set per client property.</span>
+    </div>
+    <div class="claim-row">
+      <strong>Every skill reads only from that brand's memory.</strong>
+      <span>Output stays on that client's voice, not a generic template, and not the last client you worked on.</span>
+    </div>
+    <div class="claim-row">
+      <strong>A compliance gate before anything ships.</strong>
+      <span>Drafts route through guardrails that flag risky claims and an audit loop, not straight to publish.</span>
+    </div>
+  </section>
+
+  <!-- §4 — Full-path line (held constant, ONE SENTENCE with internal commas — do not bullet) -->
+  <section class="section" id="s4">
+    <p>The toolkit covers what an agency pod actually does, from research and persona to angle and copy, through the ad and the page, and back through the teardown, all reading from that client's own brand memory and routed through the same review gate.</p>
+  </section>
+
+  <!-- §5 — Pilot offer block (held constant) -->
+  <section class="section" id="s5">
+    <div class="offer-block">
+      <p>The pilot is an evaluation. You'll see the toolkit produce real, on-brand assets across more than one client property, each from its own brand memory, and route them through the compliance gate.</p>
+      <p>No price, no guarantee, no countdown &mdash; this stage is for seeing whether the mechanism holds up across more than one of your brands before anything else is on the table.</p>
+    </div>
+    <a href="[EVALUATION_URL]" class="cta-btn" style="margin-top: 28px;" id="mid-cta">See the pilot &rarr;</a>
+  </section>
+
+  <!-- §6 — Objection block (held constant) -->
+  <section class="section" id="s6">
+    <div class="objection">
+      <p class="question">&ldquo;My clients' brands are too different for one tool.&rdquo;</p>
+      <p class="answer">Each client gets its own memory, its own voice, its own audience, and its own approved claims. The toolkit reads only from that client's file when it's working on that client. Different brands stay different.</p>
+    </div>
+    <div class="objection">
+      <p class="question">&ldquo;I can't risk a bad claim slipping through on a client account.&rdquo;</p>
+      <p class="answer">Every draft routes through the compliance gate before it ships. Risky phrasing gets flagged against that client's approved-claims list, not after the post goes live.</p>
+    </div>
+  </section>
+
+  <!-- §7 — Footer CTA (held constant) -->
+  <section class="footer-cta">
+    <a href="[EVALUATION_URL]" class="cta-btn" id="footer-cta">See the pilot &rarr;</a>
+  </section>
+
+</div>
+
+<!--
+  META PIXEL — install before launch
+  Replace [PIXEL_ID] with the value from attribution-config.md once provisioned.
+  Remove the comment block wrapper below after provisioning.
+-->
+<!--
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','[PIXEL_ID]');
+  fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=[PIXEL_ID]&ev=PageView&noscript=1"/></noscript>
+-->
+
+<script>
+  // UM-B006 T1 Hook Test — Variant routing (Angle 2 / Avatar B)
+  // ?v=u1 (default) through ?v=u5
+  // Body §2–§7 is identical across all units. Only hero section swaps.
+  // Hook archetypes (per creative-pack):
+  //   u1 — declarative-ten-brands (lead, default)
+  //   u2 — single-session diagnostic
+  //   u3 — three-pillar contrarian-distinction
+  //   u4 — voice-bleed diagnostic
+  //   u5 — compliance-anchor
+
+  var VARIANTS = {
+    u1: {
+      h1: 'Run ten brands without confusing their voices.',
+      sub: 'Most AI marketing tools have one memory, yours, and switching clients means re-pasting context until the voice bleeds. UM Toolkit gives each brand its own memory, and routes every draft through a compliance gate before anything ships.',
+      badge: 'Per-client memory · compliance gate · one review loop',
+      transition: 'Here is the distinction.'
+    },
+    u2: {
+      h1: 'One AI session per client.\nEach one remembers only that client.',
+      sub: 'A shared session forgets which client it’s writing for the second you switch tabs. The toolkit gives each client its own session memory, and every skill on that client reads only from that client’s file.',
+      badge: 'One memory per brand · every skill reads from it · compliance gate before anything ships',
+      transition: 'Here is where the difference lives.'
+    },
+    u3: {
+      h1: 'Per-client memory. Compliance gate. One review loop.\n(Choose any agency tool that gives you all three.)',
+      sub: 'The three pillars are the same three the brief audits this page on, and they are what the toolkit was built around from the memory layer up.',
+      badge: 'Per-client brand intelligence · compliance gate · review-and-learn loop',
+      transition: 'Here are the three, plain.'
+    },
+    u4: {
+      h1: 'Your AI doesn’t know which client it’s writing for.',
+      sub: 'That is why the voices start to blur, why the same line shows up in three different clients’ copy, and why you end up re-briefing the model every morning. The toolkit fixes the cause, with per-client memory and a compliance gate the draft routes through before anything ships.',
+      badge: 'Per-client memory · every skill reads only from that file · compliance gate before anything ships',
+      transition: 'Here is the cause, named.'
+    },
+    u5: {
+      h1: 'One AI. Ten clients. No memory between them.\nThat’s how a bad claim ships.',
+      sub: 'When the model doesn’t know which client it’s writing for, it cannot check the copy against that client’s approved-claims list, and a risky line goes out before anyone catches it. The toolkit keeps each client’s memory separate, and routes every draft through a compliance gate before it ships.',
+      badge: 'Per-client memory · compliance gate · review-and-learn loop',
+      transition: 'Here is what the gate is built to catch.'
+    }
+  };
+
+  var params = new URLSearchParams(window.location.search);
+  var v = params.get('v') || 'u1';
+  if (!VARIANTS[v]) v = 'u1';
+
+  var d = VARIANTS[v];
+
+  document.getElementById('page-h1').textContent = d.h1;
+  document.getElementById('page-sub').textContent = d.sub;
+  document.getElementById('page-badge').textContent = d.badge;
+  document.getElementById('transition-line').textContent = d.transition;
+
+  // Ensure ?v= is always present in URL (aids analytics matching)
+  if (!params.get('v')) {
+    var url = new URL(window.location.href);
+    url.searchParams.set('v', 'u1');
+    window.history.replaceState({}, '', url.toString());
+  }
+</script>
+
+</body>
+</html>
