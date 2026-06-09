@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UM Toolkit Pilot — See it across two brand memories, with the audit gate in view</title>
+<meta name="description" content="The pilot evaluation. Two brand memories, two on-brand assets, one compliance-gate verdict in the flow.">
+<style>
+  :root {
+    --ink: #111418;
+    --ink-soft: #2a2f37;
+    --muted: #5c6470;
+    --rule: #e5e8ed;
+    --bg: #fbfbfa;
+    --card: #ffffff;
+    --pass: #1d6d3a;
+    --block: #b3261e;
+    --accent: #1b1f24;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+    font-size: 17px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 96px; }
+  header.top { border-bottom: 1px solid var(--rule); padding-bottom: 28px; margin-bottom: 40px; }
+  .eyebrow { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+  h1 { font-size: 34px; line-height: 1.2; margin: 0 0 14px; letter-spacing: -0.01em; }
+  h2 { font-size: 22px; line-height: 1.3; margin: 48px 0 14px; letter-spacing: -0.01em; }
+  h3 { font-size: 17px; margin: 22px 0 8px; }
+  p { margin: 0 0 14px; color: var(--ink-soft); }
+  .lede { font-size: 18px; color: var(--ink-soft); }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 22px 24px;
+    margin: 18px 0 28px;
+  }
+  .memory-file {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 13.5px;
+    line-height: 1.55;
+    background: #f4f5f7;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 14px 16px;
+    color: var(--ink);
+    white-space: pre-wrap;
+    margin: 8px 0 14px;
+  }
+  .path { color: var(--muted); font-size: 13px; margin-bottom: 4px; }
+  .asset {
+    border-left: 3px solid var(--accent);
+    padding: 4px 0 4px 16px;
+    margin: 10px 0 4px;
+  }
+  .asset h4 { margin: 0 0 6px; font-size: 16px; }
+  .asset p { color: var(--ink); margin-bottom: 6px; }
+  .verdict-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 15px;
+  }
+  .verdict-row:last-child { border-bottom: 0; }
+  .verdict-row .dim { color: var(--ink-soft); }
+  .verdict-row .score { font-family: ui-monospace, monospace; color: var(--ink); }
+  .badge {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .badge.pass { background: #e6f1ea; color: var(--pass); }
+  .badge.block { background: #fbe7e6; color: var(--block); }
+  .flow {
+    background: #fbf9f4;
+    border: 1px solid #ece5d2;
+    border-radius: 6px;
+    padding: 18px 22px;
+    margin: 14px 0 22px;
+    font-size: 15.5px;
+  }
+  .flow strong { color: var(--block); }
+  .flow .after strong { color: var(--pass); }
+  footer.bottom { margin-top: 60px; padding-top: 28px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px; }
+  footer.bottom p { color: var(--muted); }
+  a { color: var(--accent); }
+  .demo-tag {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-left: 8px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="eyebrow">UM Toolkit · Pilot evaluation</div>
+  <h1>Two brand memories, two on-brand assets, one audit verdict in view.</h1>
+  <p class="lede">This is the pilot evaluation, not a checkout. The point is to show you the mechanism doing what the page promised, with the moving parts open.</p>
+</header>
+
+<h2>What's actually here</h2>
+<p>Two sample brand properties ship with the toolkit, each with its own memory file. The same skill — the Meta-ad copywriter — runs against each memory, and the output reflects that brand's voice, not the other one's. Then one draft routes through the compliance-and-congruency audit gate, so you can see what the review loop catches before anything ships.</p>
+
+<h2>Brand property #1 — Northwood Outfitters <span class="demo-tag">sample brand memory</span></h2>
+
+<div class="card">
+  <h3>Memory file</h3>
+  <div class="path">marketing-ops/clients/northwood/brand-voice.md</div>
+<div class="memory-file"># Brand Voice — Northwood Outfitters
+
+Who's speaking: a guide who has spent the night on the mountain, talking to
+someone who hasn't yet. Confident, specific, useful. No hype, no peak-bagging
+machismo.
+
+Tone: short declarative sentences. Concrete nouns (a tent, a stove, a wet sock),
+not abstractions (adventure, journey, freedom). Earned-confidence. Reading level
+~grade 7.
+
+On-brand line: "A good tent is the one you don't think about at 2 a.m."
+Off-brand: "Unleash your inner explorer with our revolutionary gear."
+
+Approved claims: 25-year repair guarantee on shells; lifetime hardware on packs.
+Banned: any "lightest in the world" / "warmest ever" superlative.</div>
+
+  <h3>Asset produced — Meta ad hook + body</h3>
+  <div class="asset">
+    <h4>Hook: A good tent is the one you don't sleep wondering about.</h4>
+    <p>Northwood shells carry a 25-year repair guarantee — bring it back, we fix it, you keep going. Most "lightest ever" tents skip the part where the seam fails on night three. Ours don't.</p>
+  </div>
+</div>
+
+<h2>Brand property #2 — Verdance Studio <span class="demo-tag">sample brand memory</span></h2>
+
+<div class="card">
+  <h3>Memory file</h3>
+  <div class="path">marketing-ops/clients/verdance/brand-voice.md</div>
+<div class="memory-file"># Brand Voice — Verdance Studio
+
+Who's speaking: a principal architect explaining a finished house to a client who
+loves it. Quiet, measured, exact about materials and light. Not breathy, not
+"luxury-lifestyle."
+
+Tone: longer sentences with a clear interior structure, allowed. Specific
+materials (lime plaster, white oak, board-formed concrete) over adjectives
+(stunning, breathtaking). Reading level ~grade 9.
+
+On-brand line: "The room works because the window is in the right place, not
+because the window is large."
+Off-brand: "Stunning luxury home reveal — you won't believe the finishes!"
+
+Approved claims: AIA award-winning practice (2024); residential portfolio in
+three climate zones. Banned: dollar-figure project values, named-client
+testimonials without written release.</div>
+
+  <h3>Asset produced — Meta ad hook + body</h3>
+  <div class="asset">
+    <h4>Hook: The room works because the window is in the right place.</h4>
+    <p>Verdance designs residential interiors where the light, the material, and the proportion are decided together — board-formed concrete with white oak, plaster with linen — so the room reads quiet, not staged. AIA-recognized practice, three climate zones, no two houses alike.</p>
+  </div>
+</div>
+
+<p><strong>What this shows.</strong> Same skill, same model, two different outputs — because each one read only from its client's memory. Northwood's "2 a.m. tent" line is not in Verdance's file. Verdance's "window in the right place" line is not in Northwood's. There is no shared "voice" the model defaults to when nothing else is loaded, because each memory is the only thing loaded for its run.</p>
+
+<h2>The compliance-and-congruency audit — one draft, one verdict</h2>
+
+<p>Every draft routes through the seven-dimension audit gate before it can ship to paid spend. Here is what that gate did to a real draft against the Northwood property.</p>
+
+<h3>Draft submitted (pre-gate)</h3>
+<div class="card">
+  <p style="margin:0;"><strong>Hook:</strong> The lightest 3-season tent on the market — guaranteed to keep you dry, or your money back.</p>
+  <p style="margin:0;"><strong>Body:</strong> Outdoor pros choose Northwood because nothing else compares. Free shipping today only.</p>
+</div>
+
+<h3>Audit verdict</h3>
+<div class="card" style="padding-bottom: 12px;">
+  <div class="verdict-row">
+    <div class="dim">1 · Avatar fit</div>
+    <div class="score">5 / 5</div>
+  </div>
+  <div class="verdict-row">
+    <div class="dim">2 · Angle integrity</div>
+    <div class="score">4 / 5</div>
+  </div>
+  <div class="verdict-row">
+    <div class="dim">3 · Claim legitimacy</div>
+    <div class="score">2 / 5 &nbsp;<span class="badge block">block</span></div>
+  </div>
+  <div class="verdict-row">
+    <div class="dim">4 · Offer congruency</div>
+    <div class="score">3 / 5</div>
+  </div>
+  <div class="verdict-row">
+    <div class="dim">5 · Compliance</div>
+    <div class="score">2 / 5 &nbsp;<span class="badge block">block</span></div>
+  </div>
+  <div class="verdict-row">
+    <div class="dim">6 · Brand voice</div>
+    <div class="score">3 / 5</div>
+  </div>
+  <div class="verdict-row">
+    <div class="dim">7 · Funnel coherence</div>
+    <div class="score">4 / 5</div>
+  </div>
+  <div class="verdict-row" style="margin-top: 6px;">
+    <div class="dim"><strong>Overall</strong></div>
+    <div class="score"><strong>3.29 / 5</strong> &nbsp;<span class="badge block">block</span></div>
+  </div>
+</div>
+
+<h3>What the gate caught</h3>
+<div class="flow">
+  <p><strong>Dim 3 fail — invented claim.</strong> "Lightest 3-season tent on the market" is a superlative with no proof on file in Northwood's approved-claims list, and the brand-voice memory explicitly bans "lightest-ever" superlatives. Gate blocks at the claim layer, before spend.</p>
+  <p><strong>Dim 5 fail — banned framing.</strong> "Guaranteed to keep you dry, or your money back" overpromises against the real guarantee on file, which is a 25-year repair guarantee on shells, not a weather-outcome guarantee. Gate blocks at compliance, before spend.</p>
+  <p class="after" style="margin-bottom: 0;"><strong>After revision, re-audit:</strong> 4.57 / 5, no dimension under 4. <span class="badge pass">approve</span> The "2 a.m. tent" hook in the Brand #1 card above is the revised output that cleared the gate.</p>
+</div>
+
+<h2>What this proves about the mechanism</h2>
+<p>The two cards above are not stylistic exercises, they are the visible output of two memory files reading independently. The verdict above is not a screenshot of a happy path, it is a draft that started off-brand and was stopped at the gate before the spend gate opened. Per-client memory, plus an audit gate that actually blocks, is the whole claim the page made above the fold.</p>
+
+<h2>What's next, if you want it on one of your brands</h2>
+<p>This evaluation is the destination of the ad, not the start of a sales process. There is no checkout on this page, and no countdown. If you want to see this run against one of your own client brands, the next step is a short note to the operator — same person who built this — and a memory file we set up together for one of your properties.</p>
+
+<footer class="bottom">
+  <p>UM Toolkit · Pilot evaluation thread · Maintained by the Leridio Strategist · Last updated 2026-06-09</p>
+  <p>The two brand properties on this page (Northwood Outfitters, Verdance Studio) are sample brand memories that ship with the toolkit for evaluation purposes. They are not real customer accounts and no claims about them are made beyond what is in their respective memory files.</p>
+</footer>
+
+</div>
+</body>
+</html>
